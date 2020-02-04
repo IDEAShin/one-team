@@ -1,9 +1,9 @@
-server:
-  port: 2335
-
 spring:
   application:
     name: one-team-uap
+
+server:
+  port: 2335
 
 eureka:
   client:
