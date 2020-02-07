@@ -7,9 +7,9 @@
         <artifactId>one-team</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>one-team-uap</artifactId>
+    <artifactId>one-team-zipkin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>one-team-uap</name>
+    <name>one-team-zipkin</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
@@ -18,29 +18,45 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 健康监控 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- eureka服务端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- feign项目  -->
+        <!-- https://mvnrepository.com/artifact/io.zipkin.zipkin2/zipkin -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>io.zipkin.zipkin2</groupId>
+            <artifactId>zipkin</artifactId>
         </dependency>
 
-        <!-- 熔断器仪表盘  -->
+        <!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-server</artifactId>
         </dependency>
 
-        <!-- 使用云配置  -->
+        <!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
