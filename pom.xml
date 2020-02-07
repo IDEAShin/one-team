@@ -18,6 +18,9 @@
     <modules>
         <module>one-team-eureka</module>
         <module>one-team-mcs</module>
+        <module>one-team-config</module>
+        <module>one-team-uap</module>
+        <module>one-team-zuul</module>
     </modules>
 
     <properties>
@@ -25,8 +28,8 @@
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
         <rocketmq-client.version>4.6.0</rocketmq-client.version>
         <zipkin.version>2.19.3</zipkin.version>
-        <zipkin-server.version>2.12.9</zipkin-server.version>
-        <zipkin-autoconfigure-ui.version>2.12.9</zipkin-autoconfigure-ui.version>
+        <zipkin-server.version>2.12.5</zipkin-server.version>
+        <zipkin-autoconfigure-ui.version>2.12.5</zipkin-autoconfigure-ui.version>
     </properties>
 
     <dependencies>
@@ -55,10 +58,10 @@
         </dependency>
 
         <!-- 所有项目都需要被链路追踪 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <dependencyManagement>
