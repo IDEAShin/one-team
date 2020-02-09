@@ -21,6 +21,7 @@
         <module>one-team-config</module>
         <module>one-team-uap</module>
         <module>one-team-zuul</module>
+        <module>one-team-admin</module>
     </modules>
 
     <properties>
@@ -30,6 +31,7 @@
         <zipkin.version>2.19.3</zipkin.version>
         <zipkin-server.version>2.12.5</zipkin-server.version>
         <zipkin-autoconfigure-ui.version>2.12.5</zipkin-autoconfigure-ui.version>
+        <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
     </properties>
 
     <dependencies>
@@ -58,10 +60,16 @@
         </dependency>
 
         <!-- 所有项目都需要被链路追踪 -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
+        <!-- spring-cloud-admin客户端-->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -101,7 +109,17 @@
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
             </dependency>
+
+            <!-- 管理spring-boot-admin的依赖 -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <build>

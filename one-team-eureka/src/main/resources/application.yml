@@ -1,11 +1,16 @@
-server:
-  port: 2333
-
 spring:
   application:
     name: one-team-eureka
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
+  boot:
+    admin:
+      client:
+        url: http://${eureka.instance.hostname}:2338
+
+server:
+  port: 2333
+
 eureka:
   client:
     fetch-registry: false

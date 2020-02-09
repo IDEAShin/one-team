@@ -1,10 +1,15 @@
+server:
+  port: 2000
+
 spring:
   application:
     name: one-team-zuul
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
-server:
-  port: 2000
+  boot:
+    admin:
+      client:
+        url: http://${eureka.instance.hostname}:2338
 
 eureka:
   client:

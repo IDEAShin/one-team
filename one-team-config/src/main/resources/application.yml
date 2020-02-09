@@ -10,6 +10,10 @@ spring:
           search-paths: respo
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
+  boot:
+    admin:
+      client:
+        url: http://${eureka.instance.hostname}:2338
 
 # config-server默认的端口就是8888，不能修改
 # 修改需要额外新建一个bootstrap.properties里面server.port进行配置，此配置有限加载

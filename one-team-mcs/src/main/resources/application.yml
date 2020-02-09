@@ -6,6 +6,10 @@ spring:
     name: one-team-mcs
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
+  boot:
+    admin:
+      client:
+        url: http://${eureka.instance.hostname}:2338
 
 eureka:
   client:
