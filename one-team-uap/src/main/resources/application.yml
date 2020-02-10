@@ -1,24 +1,7 @@
 spring:
-#  application:
-#    name: one-team-uap
   cloud:
     config:
       uri: http://localhost:8888
       name: one-team-uap
       label: master
       profile: prod
-
-#server:
-#  port: 2335
-#
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:2333/eureka/
-#  instance:
-#    hostname: localhost
-#
-## 开启熔断器
-#feign:
-#  hystrix:
-#    enabled: true

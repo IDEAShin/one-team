@@ -1,24 +1,31 @@
+# config-server默认的端口就是8888，不能修改
+# 修改需要额外新建一个bootstrap.properties里面server.port进行配置，此配置有限加载
+server:
+  port: 8888
+
 spring:
   application:
     name: one-team-config
+  # 本地路径
   cloud:
     config:
-      label: master
       server:
-        git:
-          uri: https://github.com/IDEAShin/spring-cloud-config.git
-          search-paths: respo
+        native:
+          search-locations: classpath:/resposity
+#  git路径
+#  cloud:
+#    config:
+#      label: master
+#      server:
+#        git:
+#          uri: https://github.com/IDEAShin/spring-cloud-config.git
+#          search-paths: respo
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
   boot:
     admin:
       client:
         url: http://${eureka.instance.hostname}:2338
-
-# config-server默认的端口就是8888，不能修改
-# 修改需要额外新建一个bootstrap.properties里面server.port进行配置，此配置有限加载
-server:
-  port: 8888
 
 eureka:
   client:

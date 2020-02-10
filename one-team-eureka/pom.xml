@@ -7,6 +7,7 @@
         <artifactId>one-team</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <groupId>com.ideashin</groupId>
     <artifactId>one-team-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>one-team-eureka</name>
