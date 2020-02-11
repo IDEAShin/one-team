@@ -6,20 +6,20 @@ server:
 spring:
   application:
     name: one-team-config
-  # 本地路径
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/resposity
-#  git路径
+#  # 本地路径
 #  cloud:
 #    config:
-#      label: master
 #      server:
-#        git:
-#          uri: https://github.com/IDEAShin/spring-cloud-config.git
-#          search-paths: respo
+#        native:
+#          search-locations: classpath:/resposity
+#  git路径
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/IDEAShin/one-team.git
+          search-paths: one-team-config/src/main/resources/respo
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
   boot:
@@ -32,4 +32,4 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/
   instance:
-    hostname: localhost
+    hostname: 47.56.157.210

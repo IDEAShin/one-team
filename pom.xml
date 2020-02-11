@@ -16,12 +16,12 @@
     <description>Parent Module</description>
 
     <modules>
-        <module>one-team-eureka</module>
-        <module>one-team-mcs</module>
         <module>one-team-config</module>
-        <module>one-team-uap</module>
+        <module>one-team-eureka</module>
         <module>one-team-zuul</module>
         <module>one-team-admin</module>
+        <module>one-team-mcs</module>
+        <module>one-team-uap</module>
     </modules>
 
     <properties>
@@ -163,18 +163,18 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <compilerVersion>1.8</compilerVersion>-->
-<!--                    <source>${java.version}</source>-->
-<!--                    <target>${java.version}</target>-->
-<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
-<!--                    &lt;!&ndash;mvn package -DskipTests ignor junit test&ndash;&gt;-->
-<!--                    <skip>true</skip>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerVersion>${java.version}</compilerVersion>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <!--mvn package -DskipTests ignor junit test-->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

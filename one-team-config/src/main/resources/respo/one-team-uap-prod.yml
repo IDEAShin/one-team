@@ -1,5 +1,5 @@
 server:
-  port: 2335
+  port: 2667
 
 spring:
   application:
@@ -9,16 +9,26 @@ spring:
   boot:
     admin:
       client:
-        url: http://${eureka.instance.hostname}:2338
+        url: http://${eureka.instance.hostname}:9999
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/
   instance:
-    hostname: localhost
+    hostname: 47.56.157.210
 
 # 开启熔断器
 feign:
   hystrix:
     enabled: true
+
+# health健康查看
+management:
+  endpoint:
+    health:
+      show-details: always # 开启所有的Health监控数据:
+  endpoints:
+    web:
+      exposure:
+        include: health, info # 开启了info和health两个端点
