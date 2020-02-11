@@ -13,9 +13,9 @@ spring:
 
 eureka:
   client:
-    # 表示是否从 Eureka 获取注册信息，如果是单一结点，不需要通俗不其他Eureka结点，则可以设置为false，如果是集群为true
+    # 是否从 Eureka 获取注册信息，如果是单一结点，不需要通俗不其他Eureka结点，则可以设置为false，如果是集群为true
     fetch-registry: false
-    # 表示是否讲自己注册到Eureka，如果要构建集群环境，需要将自己注册到集群，才需要开启
+    # 是否讲自己注册到Eureka，如果要构建集群环境，需要将自己注册到集群，才需要开启
     register-with-eureka: false
     serviceUrl:
       # eureka地址，如果是集群，用逗号隔开设置多个
