@@ -32,4 +32,4 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/
   instance:
-    hostname: 47.56.157.210
+    hostname: 192.168.142.131

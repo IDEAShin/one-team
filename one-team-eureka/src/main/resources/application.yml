@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://192.168.142.131:8888
       name: one-team-eureka
       label: master
       profile: prod
