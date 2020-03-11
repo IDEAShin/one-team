@@ -1,18 +1,18 @@
-# config-server默认的端口就是8888，不能修改，ip也不能
-# 修改需要额外新建一个bootstrap.properties里面server.port进行配置，此配置有限加载
+# config-server\u9ED8\u8BA4\u7684\u7AEF\u53E3\u5C31\u662F8888\uFF0C\u4E0D\u80FD\u4FEE\u6539\uFF0Cip\u4E5F\u4E0D\u80FD
+# \u4FEE\u6539\u9700\u8981\u989D\u5916\u65B0\u5EFA\u4E00\u4E2Abootstrap.properties\u91CC\u9762server.port\u8FDB\u884C\u914D\u7F6E\uFF0C\u6B64\u914D\u7F6E\u6709\u9650\u52A0\u8F7D
 server:
   port: 8888
 
 spring:
   application:
     name: one-team-config
-#  # 本地路径
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/resposity
-#  git路径
+  #  # \u672C\u5730\u8DEF\u5F84
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          search-locations: classpath:/resposity
+  #  git\u8DEF\u5F84
   cloud:
     config:
       label: master
