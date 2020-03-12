@@ -14,7 +14,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:2333/eureka/
+      defaultZone: http://${eureka.instance.hostname}:2333/eureka/,http://${eureka.instance.hostname}:2334/eureka/,http://${eureka.instance.hostname}:2335/eureka/
   instance:
     hostname: 47.56.157.210
 
