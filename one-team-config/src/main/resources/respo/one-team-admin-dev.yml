@@ -12,7 +12,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/
   instance:
-    hostname: 47.56.157.210
+    hostname: 185.45.114.190
 
 # health健康查看
 management:

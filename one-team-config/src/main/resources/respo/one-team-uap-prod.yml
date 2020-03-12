@@ -16,7 +16,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/,http://${eureka.instance.hostname}:2334/eureka/,http://${eureka.instance.hostname}:2335/eureka/
   instance:
-    hostname: 192.168.142.131
+    hostname: 185.45.114.190
 
 # 开启熔断器
 feign:
