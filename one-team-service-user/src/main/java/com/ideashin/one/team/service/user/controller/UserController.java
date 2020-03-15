@@ -41,7 +41,7 @@ public class UserController {
             return baseResult;
         }
 
-        //登录业务
+        // 登录业务
         OneTeamUser oneTeamUser = userService.login(account, password);
         // 登录成功
         if (oneTeamUser != null) {

@@ -9,11 +9,14 @@
         <relativePath>../one-team-dependencies/pom.xml</relativePath>
     </parent>
     <groupId>com.ideashin</groupId>
-    <artifactId>one-team-common-service</artifactId>
+    <artifactId>one-team-common-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>one-team-common-service</name>
-    <packaging>jar</packaging>
-    <description>基础公共类</description>
+    <name>one-team-common-api</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
         <!-- Project Begin -->
@@ -26,31 +29,18 @@
 
         <!-- Spring Boot Begin -->
         <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
         <!-- Spring Boot End -->
 
-        <!--数据查询系统 -->
+        <!-- Spring Cloud Begin -->
+        <!-- feign项目  -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-        </dependency>
+        <!-- Spring Cloud End -->
 
         <dependency>
             <groupId>io.swagger</groupId>

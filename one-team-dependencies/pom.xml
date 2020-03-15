@@ -30,10 +30,12 @@
         <com.github.pagehelper.version>1.2.5</com.github.pagehelper.version>
         <io.swagger-annotations.version>1.5.22</io.swagger-annotations.version>
         <com.google.guava.version>25.1-jre</com.google.guava.version>
+        <openfeign.version>2.2.1.RELEASE</openfeign.version>
     </properties>
 
     <dependencies>
-        <dependency>
+        <!-- Spring Boot Begin -->
+       <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
@@ -62,6 +64,14 @@
             </exclusions>
         </dependency>
 
+        <!-- spring-cloud-admin客户端-->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+        <!-- Spring Boot End -->
+
+        <!-- Spring Cloud Begin -->
         <!-- eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -79,78 +89,32 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+        <!-- Spring Cloud End -->
 
-        <!-- spring-cloud-admin客户端-->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-        </dependency>
-
+        <!-- 自动生成get、set等方法 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
 
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper-spring-boot-starter -->
+            <!-- Spring Boot Begin -->
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>
                 <version>${tk.mybatis.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
+            <!-- 分页工具  -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${com.github.pagehelper.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${alibaba-druid.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.zipkin.zipkin2/zipkin -->
-            <dependency>
-                <groupId>io.zipkin.zipkin2</groupId>
-                <artifactId>zipkin</artifactId>
-                <version>${zipkin.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server -->
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-server</artifactId>
-                <version>${zipkin-server.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui -->
-            <dependency>
-                <groupId>io.zipkin.java</groupId>
-                <artifactId>zipkin-autoconfigure-ui</artifactId>
-                <version>${zipkin-autoconfigure-ui.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
-            <dependency>
-                <groupId>org.apache.rocketmq</groupId>
-                <artifactId>rocketmq-client</artifactId>
-                <version>${rocketmq-client.version}</version>
             </dependency>
 
             <!-- 管理spring-boot-admin的依赖 -->
@@ -161,8 +125,57 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Spring Boot End -->
 
-            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <!-- Spring Cloud Begin -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- feign项目  -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${openfeign.version}</version>
+            </dependency>
+
+            <!-- 熔断器仪表盘  -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+            </dependency>
+            <!-- Spring Cloud End -->
+
+            <!-- Zipkin Begin 链路追踪 -->
+            <dependency>
+                <groupId>io.zipkin.zipkin2</groupId>
+                <artifactId>zipkin</artifactId>
+                <version>${zipkin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-server</artifactId>
+                <version>${zipkin-server.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-ui</artifactId>
+                <version>${zipkin-autoconfigure-ui.version}</version>
+            </dependency>
+            <!-- Zipkin End -->
+
+            <!-- SQL Begin -->
+            <!-- 数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${alibaba-druid.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -174,21 +187,27 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>${org.mybatis.generator}</version>
             </dependency>
+            <!-- SQL Begin -->
 
-            <!-- 定义api文档 https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+            <!-- 定义api文档 -->
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${io.swagger-annotations.version}</version>
             </dependency>
 
-            <!-- Google工具类，简化开发 https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <!-- Google工具类，简化开发 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${com.google.guava.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq-client.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
