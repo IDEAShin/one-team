@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://185.45.114.190:8888
+      name: one-team-msc
+      label: master
+      profile: prod
