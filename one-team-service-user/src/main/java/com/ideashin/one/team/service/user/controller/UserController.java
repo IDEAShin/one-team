@@ -28,7 +28,7 @@ public class UserController {
     /**
      * 登录
      *
-     * @param loginCode
+     * @param account
      * @param password
      * @return
      */
