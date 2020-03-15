@@ -18,8 +18,10 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/IDEAShin/one-team.git
-          search-paths: one-team-config/src/main/resources/respo
+          uri: http://185.45.114.190/one-team/one-team-config.git
+          search-paths: src/main/resources/respo
+          username: shin
+          password: ideashin.com
   zipkin:
     base-url: http://${eureka.instance.hostname}:9411
   boot:

@@ -4,8 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ideashin</groupId>
-        <artifactId>one-team</artifactId>
+        <artifactId>one-team-dependencies</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../one-team-dependencies/pom.xml</relativePath>
     </parent>
     <groupId>com.ideashin</groupId>
     <artifactId>one-team-config</artifactId>

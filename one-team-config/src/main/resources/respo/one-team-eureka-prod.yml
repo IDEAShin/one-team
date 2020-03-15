@@ -18,7 +18,7 @@ eureka:
     # 表示是否讲自己注册到Eureka，如果要构建集群环境，需要将自己注册到集群，才需要开启
     register-with-eureka: true
     serviceUrl:
-      # eureka地址，如果是集群，用逗号隔开设置多个
+      # eureka地址，如果是集群，用逗号隔开设置 多个
       defaultZone: http://${eureka.instance.hostname}:2333/eureka/,http://${eureka.instance.hostname}:2334/eureka/,http://${eureka.instance.hostname}:2335/eureka/
   instance:
     hostname: 185.45.114.190
