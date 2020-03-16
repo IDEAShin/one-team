@@ -12,9 +12,9 @@ spring:
         url: http://${eureka.instance.hostname}:9999
   datasource:
     druid:
-      url: jdbc:mysql://192.168.142.131:3306/one-team-user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://185.45.114.190:3306/one-team-user?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
-      password: 123456
+      password: shin
       initial-size: 1
       min-idle: 1
       max-active: 20
