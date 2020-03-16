@@ -12,6 +12,9 @@ spring:
         url: http://${eureka.instance.hostname}:9999
   datasource:
     url: jdbc:mysql://185.45.114.190:3306/one_team?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: shin
     druid:
       url: jdbc:mysql://185.45.114.190:3306/one-team?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
