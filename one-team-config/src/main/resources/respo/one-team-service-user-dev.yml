@@ -11,6 +11,7 @@ spring:
       client:
         url: http://${eureka.instance.hostname}:9999
   datasource:
+    url: jdbc:mysql://185.45.114.190:3306/one_team?useUnicode=true&characterEncoding=utf-8&useSSL=false
     druid:
       url: jdbc:mysql://185.45.114.190:3306/one-team?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root

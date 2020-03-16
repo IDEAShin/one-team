@@ -19,7 +19,8 @@ import java.util.List;
  * @Blog: ideashin.com
  */
 
-@RestController("api")
+@RestController
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
