@@ -23,7 +23,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:
-  type-aliases-package: com.ideashin.one.team.service.user.domain
+  type-aliases-package: com.ideashin.one.team.service.user.entity
   mapper-locations: classpath:mapper/*.xml
 
 eureka:
