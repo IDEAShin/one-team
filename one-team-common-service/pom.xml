@@ -34,13 +34,12 @@
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
-        <!-- Spring Boot End -->
 
-        <!--数据查询系统 -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
+        <!-- Spring Boot End -->
 
         <dependency>
             <groupId>mysql</groupId>
