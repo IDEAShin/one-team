@@ -19,7 +19,7 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       # eureka地址，如果是集群，用逗号隔开设置 多个
-      defaultZone: http://${eureka.instance.hostname}:2333/eureka/,http://${eureka.instance.hostname}:2334/eureka/,http://${eureka.instance.hostname}:2335/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8866/eureka/,http://${eureka.instance.hostname}:8867/eureka/,http://${eureka.instance.hostname}:8868/eureka/
   instance:
     hostname: 185.45.114.190
   server:  #配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
