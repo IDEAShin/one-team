@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       uri: http://185.45.114.190:8888
-      name: one-team-msc
+      name: one-team-service-user
       label: master
       profile: prod
