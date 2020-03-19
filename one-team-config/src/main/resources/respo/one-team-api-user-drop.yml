@@ -18,6 +18,12 @@ eureka:
   instance:
     hostname: 185.45.114.190
 
+
+# 开启熔断器
+feign:
+  hystrix:
+    enabled: true
+
 # health健康查看
 management:
   endpoint:

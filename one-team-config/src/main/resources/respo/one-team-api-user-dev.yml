@@ -18,6 +18,12 @@ eureka:
   instance:
     hostname: localhost
 
+
+# 开启熔断器
+feign:
+  hystrix:
+    enabled: true
+
 # health健康查看
 management:
   endpoint:

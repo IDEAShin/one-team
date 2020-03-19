@@ -1,7 +1,10 @@
 package com.ideashin.one.team.service.user.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Table(name = "one_team_user")
 public class OneTeamUser {
     /**

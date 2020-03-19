@@ -20,7 +20,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("user")
 public class UserController {
 
     @Autowired
@@ -34,8 +34,9 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "登录接口", httpMethod = "GET")
-    @RequestMapping(value = "project/login", method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public BaseResult login(String account, String password) {
+        System.out.println(account + "--" + password);
         // 检查登录信息
         BaseResult baseResult = cheakLogin(account, password);
         if (baseResult != null) {
@@ -63,12 +64,12 @@ public class UserController {
     private BaseResult cheakLogin(String account, String password) {
         BaseResult baseResult = null;
         // 使用google工具类创建ArrayList
-        List<BaseResult.Error> errorList = Lists.newArrayList();
+//        List<BaseResult.Error> errorList = Lists.newArrayList();
 
         if (StringUtils.isBlank(account) || StringUtils.isBlank(password)) {
             baseResult = BaseResult.notOk(Lists.newArrayList(
-                    new BaseResult.Error("account", "account cannot be empty!"),
-                    new BaseResult.Error("account", "account cannot be empty!")
+                    new BaseResult.Error("account", "Account cannot be empty!"),
+                    new BaseResult.Error("password", "Password cannot be empty!")
             ));
         }
 

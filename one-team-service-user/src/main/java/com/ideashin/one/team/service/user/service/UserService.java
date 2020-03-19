@@ -14,7 +14,7 @@ public interface UserService {
      *
      * @param oneTeamUser 用户信息类
      */
-    public void register(OneTeamUser oneTeamUser);
+    void register(OneTeamUser oneTeamUser);
 
     /**
      * 登录
@@ -23,5 +23,5 @@ public interface UserService {
      * @param plantPassword 明文密码
      * @return
      */
-    public OneTeamUser login(String loginCode, String plantPassword);
+    OneTeamUser login(String loginCode, String plantPassword);
 }

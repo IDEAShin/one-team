@@ -16,5 +16,9 @@
     <description>基础工具类</description>
 
     <dependencies>
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+        </dependency>
     </dependencies>
 </project>

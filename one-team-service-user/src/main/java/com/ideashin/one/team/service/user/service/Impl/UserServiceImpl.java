@@ -3,7 +3,6 @@ package com.ideashin.one.team.service.user.service.Impl;
 import com.ideashin.one.team.service.user.entity.OneTeamUser;
 import com.ideashin.one.team.service.user.mapper.OneTeamUserMapper;
 import com.ideashin.one.team.service.user.service.UserService;
-import org.apache.ibatis.annotations.One;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +14,7 @@ import tk.mybatis.mapper.entity.Example;
  * @Date: 11/2/2020 01:34
  * @Blog: ideashin.com
  */
-@Service
+@Service("userService")
 @Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
 

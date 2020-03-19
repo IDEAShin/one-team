@@ -32,6 +32,7 @@
         <com.google.guava.version>25.1-jre</com.google.guava.version>
         <openfeign.version>2.2.1.RELEASE</openfeign.version>
         <com.alibaba.druid.version>1.1.21</com.alibaba.druid.version>
+        <nimbus-jose-jwt.version>8.10</nimbus-jose-jwt.version>
     </properties>
 
     <dependencies>
@@ -155,6 +156,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>${openfeign.version}</version>
             </dependency>
             <!-- Spring Cloud End -->
 
@@ -215,6 +217,12 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.nimbusds</groupId>
+                <artifactId>nimbus-jose-jwt</artifactId>
+                <version>${nimbus-jose-jwt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
